@@ -534,7 +534,7 @@ lws_h2_settings(struct lws *wsi, struct http2_settings *settings,
 		case H2SET_INITIAL_WINDOW_SIZE:
 			if (b > 0x7fffffff) {
 				lws_h2_goaway(nwsi, H2_ERR_FLOW_CONTROL_ERROR,
-					      "Inital Window beyond max");
+					      "Initial Window beyond max");
 				return 1;
 			}
 
